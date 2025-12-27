@@ -68,7 +68,7 @@ export const portfolioData = {
                 {
                     title: "Software Engineer",
                     duration: "Sep 2025 – Present",
-                    description: "Working as a Full Stack Engineer using Node.js, MongoDB, React, and React Native. Built the Investor Relations portal from scratch and improved frontend performance.",
+                    description: "Working as a Full Stack Engineer using Node.js, MongoDB, React, and React Native, building scalable systems with RPC APIs and REST APIs. Built the Investor Relations portal from scratch, owning the complete lifecycle—from database schema design and backend API development to frontend integration and business workflows. Developed a Dashboard to manage Investor Relations data, implementing end-to-end CRUD operations. Identified and fixed critical frontend performance issues, reducing Cumulative Layout Shift (CLS) from 21% to 9%, significantly improving UI stability and user experience. Worked extensively with the Urban Company Design System, refactoring and standardizing UI components to match design specifications and ensure consistency across the application.",
                     skills: ["React", "Node.js", "System Design", "React Native", "RPC API", "Rest API", "Postman", "MongoDb"]
                 }
             ]
