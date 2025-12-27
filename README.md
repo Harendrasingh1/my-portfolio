@@ -1,54 +1,104 @@
-# Harendra Singh - Premium Full Stack Portfolio
+# Premium React Portfolio
 
-A high-performance, responsive personal portfolio website built with **React (Vite)**, **Tailwind CSS**, and **Framer Motion**.  
-Designed with a "Premium" aesthetic featuring a custom dark theme, glassmorphism UI, and smooth animations.
+A stunning, responsive, and high-performance developer portfolio website built with modern web technologies. This project is highly customizable and designed to showcase your skills, experience, and projects in a visual and interactive way.
 
-## 🚀 Tech Stack
+![Portfolio Preview](/public/assets/preview.png)
 
-- **Core**: React 19 (Vite)
-- **Styling**: Tailwind CSS (Custom Dark Theme, Glassmorphism)
+## ✨ Features
+
+- **Standard Modern Tech Stack**: Built with React (Vite), Tailwind CSS, and Framer Motion.
+- **Responsive Design**: Fully responsive across mobile, tablet, and desktop devices.
+- **Glassmorphism UI**: Trendy glass UI components with backdrop blur effects.
+- **3D Animations**: Interactive 3D tilt effects on cards and skills.
+- **Smooth Navigation**: Sticky header with scroll-spy navigation and mobile drawer.
+- **EmailJS Integration**: Functional contact form without a backend server.
+- **Centralized Data**: Easily update content via a single configuration file (`src/data/portfolio.js`).
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS, PostCSS
 - **Animations**: Framer Motion
-- **Icons**: Lucide React / React Icons
-- **Forms**: EmailJS (Serverless Contact Form)
+- **Icons**: React Icons
+- **3D Effects**: React Parallax Tilt
+- **Forms**: EmailJS
+- **Router**: React Scroll
 
-## ✨ Features & Sections
+## 🚀 Getting Started
 
-The application is structured into 10 key sections, rendered sequentially:
+Follow these instructions to run the project locally.
 
-1.  **Header**: Sticky navigation with glass effect and mobile drawer.
-2.  **Hero Section**: High-impact landing with 3D/Abstract visuals and "Full Stack Engineer" typewriter effect.
-3.  **About Me**: Professional bio and highlights.
-4.  **Education**: Academic details (IIIT Allahabad).
-5.  **Experience**: Vertical timeline of work history (Urban Company, IIIT).
-6.  **Skills**: Interactive marquee/badges (C++, React, AWS, etc.).
-7.  **Projects**: Grid layout showcasing key projects (BuyNow, Mausam app).
-8.  **Achievements & Profiles**: Hackathon wins and coding profile cards (LeetCode, Codeforces).
-9.  **Positions of Responsibility**: Leadership roles.
-10. **Footer**: Integrated Contact Form and social links.
+### Prerequisites
 
-## 🛠️ Installation & Setup
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+- [Git](https://git-scm.com/)
 
-Ensure you have Node.js installed.
+### Installation
 
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/Harendrasingh1/my-portfolio.git
+    cd my-portfolio
+    ```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server**:
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in browser**:
+    Navigate to `http://localhost:5173` to see your portfolio live!
+
+## � Personalization & Usage
+
+The project is designed to be easily customizable. You don't need to dive deep into the component code to change the content.
+
+### 1. Update Content
+Navigate to `src/data/portfolio.js`. This file contains all the data for the website:
+- **Header**: Name and navigation links.
+- **Hero**: Name, title, subtitle, and social links.
+- **About**: Bio and highlights.
+- **Education**, **Experience**, **Skills**, **Projects**, **Achievements**: Add or modify entries in the respective arrays.
+
+### 2. Update Images
+- Place your images (profile photos, project screenshots, logos) in `public/assets/` folder.
+- Update the paths in `src/data/portfolio.js` (e.g., `logo: "/assets/my-logo.png"`).
+
+### 3. Contact Form Setup (EmailJS)
+To make the contact form functional:
+1.  Create an account at [EmailJS](https://www.emailjs.com/).
+2.  Get your **Service ID**, **Template ID**, and **Public Key**.
+3.  Open `src/components/Footer.jsx` and update the `emailjs.sendForm` function with your credentials:
+    ```javascript
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    ```
+
+### 4. Build for Production
+To create an optimized build for deployment:
 ```bash
-# 1. Clone the repository
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
-
-# 2. Install dependencies
-npm install
-
-# 3. Start the development server
-npm run dev
+npm run build
 ```
+The output will be in the `dist` folder.
 
-## 📁 Project Structure
+## 🤝 Contributing
 
-- **`src/data/portfolio.js`**: Centralized configuration file containing all text, links, and data.
-- **`src/components/`**: Reusable UI components.
-- **`src/sections/`**: Dedicated components for each of the 10 portfolio sections.
-- **`src/App.jsx`**: Main entry point.
+Contributions are welcome! If you find any issues or have suggestions, feel free to open an issue or submit a pull request.
 
-## 🎨 Customization
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
-All content is managed via `src/data/portfolio.js`. Update this file to change text, links, and images without touching the core component logic.
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+Built with ❤️ by [Harendra Singh](https://github.com/Harendrasingh1)
