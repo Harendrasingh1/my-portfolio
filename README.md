@@ -38,8 +38,8 @@ Follow these instructions to run the project locally.
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/Harendrasingh1/harenddra-portfolio.git
-    cd harenddra-portfolio
+    git clone https://github.com/Harendrasingh1/my-portfolio.git
+    cd my-portfolio
     ```
 
 2.  **Install dependencies**:
