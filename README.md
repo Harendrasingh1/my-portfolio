@@ -2,6 +2,7 @@
 
 A stunning, responsive, and high-performance developer portfolio website built with modern web technologies. This project is highly customizable and designed to showcase your skills, experience, and projects in a visual and interactive way.
 
+🚀 **Live Demo:** [https://harenddra-portfolio.netlify.app](https://harenddra-portfolio.netlify.app)
 
 ## ✨ Features
 
@@ -37,8 +38,8 @@ Follow these instructions to run the project locally.
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/Harendrasingh1/my-portfolio.git
-    cd my-portfolio
+    git clone https://github.com/Harendrasingh1/harenddra-portfolio.git
+    cd harenddra-portfolio
     ```
 
 2.  **Install dependencies**:

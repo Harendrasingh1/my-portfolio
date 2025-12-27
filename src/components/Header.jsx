@@ -145,9 +145,7 @@ const Header = () => {
                                                 onClick={toggleMenu}
                                                 className="group flex items-center space-x-4 cursor-pointer"
                                             >
-                                                <span className="text-gray-500 font-mono text-sm">
-                                                    {String(index + 1).padStart(2, '0')}
-                                                </span>
+
                                                 <span className="text-2xl font-bold text-gray-300 group-hover:text-primary transition-colors">
                                                     {section.name}
                                                 </span>

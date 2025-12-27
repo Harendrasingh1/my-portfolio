@@ -150,8 +150,8 @@ export const portfolioData = {
             title: "My Portfolio",
             description: "A premium, responsive portfolio website built with React, Tailwind CSS, and Framer Motion, featuring 3D animations and a dynamic theme.",
             techStack: ["React", "Tailwind CSS", "Framer Motion", "EmailJS"],
-            link: "https://github.com/Harendrasingh1/my-portfolio.git",
-            github: "https://github.com/Harendrasingh1/my-portfolio.git"
+            link: "https://harenddra-portfolio.netlify.app",
+            github: "https://github.com/Harendrasingh1/harenddra-portfolio.git"
         },
         {
             title: "Federated Learning in Resource Constrained Environments",
