@@ -58,7 +58,7 @@ const Header = () => {
                     </div>
                     <span>
                         {portfolioData.header.name}
-                        <span className="text-primary">.</span>
+                        <span className="text-primary"></span>
                     </span>
                 </Link>
 

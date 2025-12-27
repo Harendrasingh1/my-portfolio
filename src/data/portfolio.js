@@ -6,7 +6,7 @@ import { TbCircleSquare, TbVariable } from 'react-icons/tb';
 
 export const portfolioData = {
     header: {
-        name: "Harendra Singh",
+        name: "",
         links: [
             { id: "home", name: "Home" },
             { id: "about", name: "About" },
