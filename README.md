@@ -2,7 +2,6 @@
 
 A stunning, responsive, and high-performance developer portfolio website built with modern web technologies. This project is highly customizable and designed to showcase your skills, experience, and projects in a visual and interactive way.
 
-![Portfolio Preview](/public/assets/preview.png)
 
 ## ✨ Features
 
