@@ -156,7 +156,7 @@ export const portfolioData = {
         {
             title: "Federated Learning in Resource Constrained Environments",
             description: "Built a distributed system for federated learning where multiple clients train a shared model without sharing raw data.",
-            techStack: ["Python", "TensorFlow", "Flower", "Android"],
+            techStack: ["Python", "TensorFlow", "Flower"],
             link: "https://github.com/SuhailAhmadKhan/Federated-Learning-in-Resource-Constrained-Environments",
             github: "https://github.com/SuhailAhmadKhan/Federated-Learning-in-Resource-Constrained-Environments"
         },
