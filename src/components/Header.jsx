@@ -49,12 +49,8 @@ const Header = () => {
                     duration={500}
                     className="cursor-pointer font-bold text-2xl tracking-tighter text-white flex items-center gap-2"
                 >
-                    <div className="w-10 h-10 md:w-12 md:h-12">
-                        <img
-                            src="/assets/logo_h.jpg"
-                            alt="Logo"
-                            className="w-full h-full object-contain drop-shadow-[0_0_8px_rgba(14,165,233,0.5)] rounded-full"
-                        />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center border border-skyBlue/35 bg-gradient-to-br from-skyBlue/25 to-dark shadow-[0_0_18px_rgba(14,165,233,0.35)]">
+                        <span className="text-skyBlue font-extrabold leading-none text-xl md:text-2xl">H</span>
                     </div>
                     <span>
                         {portfolioData.header.name}
