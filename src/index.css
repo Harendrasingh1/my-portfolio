@@ -77,3 +77,53 @@
 .sphere-gradient-2 {
     background: radial-gradient(circle at 70% 70%, rgba(139, 92, 246, 0.4), rgba(139, 92, 246, 0.1) 50%, transparent 70%);
 }
+
+@keyframes splashPulse {
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.35);
+    }
+
+    50% {
+        transform: scale(1.06);
+        box-shadow: 0 0 0 16px rgba(14, 165, 233, 0);
+    }
+}
+
+@keyframes splashFadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.splash-bg {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.18), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(12, 74, 110, 0.35), transparent 50%);
+}
+
+.splash-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.24), rgba(2, 6, 23, 0.9));
+    border: 1px solid rgba(125, 211, 252, 0.25);
+    animation: splashPulse 1.8s ease-in-out infinite;
+}
+
+.splash-logo {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #7dd3fc;
+    text-shadow: 0 6px 24px rgba(14, 165, 233, 0.45);
+}
+
+.splash-exit {
+    animation: splashFadeOut 0.36s ease forwards;
+}
