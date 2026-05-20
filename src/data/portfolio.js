@@ -62,6 +62,19 @@ export const portfolioData = {
     ],
     experience: [
         {
+            organization: "Urban Company",
+            logo: "/assets/urbancompany_logo.jpg",
+            website: "https://www.urbancompany.com",
+            roles: [
+                {
+                    title: "Software Engineer",
+                    duration: "Sep 2025 – Present",
+                    description: "Working as a Full Stack Engineer across Node.js, MongoDB, React, and React Native to build and maintain scalable product workflows. Built the Investor Relations portal from scratch, owning the full lifecycle from schema design and backend APIs to frontend integration and business workflows. Improved application performance by reducing Cumulative Layout Shift (CLS) from 21% to 9%, resolved multiple backend and frontend bugs, actively handled on-call responsibilities, and optimized Jenkins pipelines using build caching and selective package updates, reducing job execution time from about 1 hour to nearly 35 minutes.",
+                    skills: ["React", "Node.js", "System Design", "React Native", "RPC API", "Rest API", "Postman", "MongoDb"]
+                }
+            ]
+        },
+        {
             organization: "Real Dimension Studio",
             logo: "/assets/RDS Logo final_V04.png",
             website: "https://realdimensionstudio.com",
@@ -70,20 +83,8 @@ export const portfolioData = {
                     title: "Full Stack Developer",
                     employment_type: "Full Time",
                     duration: "May 2025 - Sep 2025",
-                    description: "Built and maintained the Real Dimension Studio website as a frontend-heavy project with full-stack ownership. Developed the public-facing React experience, designed reusable UI sections, and also implemented the Node.js backend layer to manage website content and business data. Created an internal dashboard for updating data shown on the website, enabling structured content management and end-to-end admin workflows.",
+                    description: "Delivered the Real Dimension Studio website as a full-stack product with ownership across both frontend and backend. Built the public-facing React experience, developed reusable UI sections, implemented the Node.js backend for content and business data management, and created an internal dashboard to update website data through structured admin workflows. Contributed across product experience, content management, and operational tooling rather than only shipping a static frontend site.",
                     skills: ["React", "JavaScript", "Tailwind CSS", "Framer Motion", "Node.js", "Dashboard Development", "CRUD", "Full Stack Development"]
-                }
-            ]
-        },
-        {
-            organization: "Urban Company",
-            logo: "/assets/urbancompany_logo.jpg",
-            roles: [
-                {
-                    title: "Software Engineer",
-                    duration: "Sep 2025 – Present",
-                    description: "Working as a Full Stack Engineer using Node.js, MongoDB, React, and React Native, building scalable systems with RPC APIs and REST APIs. Built the Investor Relations portal from scratch, owning the complete lifecycle—from database schema design and backend API development to frontend integration and business workflows. Developed a Dashboard to manage Investor Relations data, implementing end-to-end CRUD operations. Identified and fixed critical frontend performance issues, reducing Cumulative Layout Shift (CLS) from 21% to 9%, significantly improving UI stability and user experience. Worked extensively with the Urban Company Design System, refactoring and standardizing UI components to match design specifications and ensure consistency across the application.",
-                    skills: ["React", "Node.js", "System Design", "React Native", "RPC API", "Rest API", "Postman", "MongoDb"]
                 }
             ]
         },
@@ -94,7 +95,7 @@ export const portfolioData = {
                 {
                     title: "Placement Coordinator",
                     duration: "Oct 2024 - Jun 2025 · 9 mos",
-                    description: "As the Coordinator of the Placement Cell, I successfully planned and managed the Placement Process for the 2024-25 academic year. Leading the 2021-2025 batch, I helped connect students with recruiters and create better job opportunities. My focus was on supporting my batchmates in their careers, improving the placement process, and building strong industry connections.",
+                    description: "Led placement coordination for the 2021-2025 batch and helped manage the end-to-end placement process for the 2024-25 academic year. Worked closely with recruiters, students, and the placement team to streamline communication, improve execution of placement activities, and create stronger opportunities for the batch. This role strengthened my ownership, stakeholder management, and execution under pressure.",
                     skills: ["Communication", "Campus Placements", "Management"]
                 },
                 {
@@ -102,7 +103,7 @@ export const portfolioData = {
                     employment_type: "Internship",
                     duration: "Jul 2024 - Nov 2024 · 5 mos",
                     location: "Prayagraj, Uttar Pradesh, India · On-site",
-                    description: "Federated Learning enables decentralized model training by keeping data on local devices, exchanging only model updates for collaborative learning. It preserves data privacy, reduces communication costs, and enables efficient model training on resource-constrained devices like mobile phones.",
+                    description: "Worked on Federated Learning, a distributed AI training methodology where models are trained across multiple devices or nodes without moving raw data to a central server. Focused on privacy-preserving collaborative learning by exchanging model updates instead of user data, making AI model training more secure, communication-efficient, and practical for resource-constrained environments such as mobile and edge devices.",
                     skills: ["Machine Learning", "Python", "TensorFlow", "Distributed Systems"]
                 }
             ]
@@ -115,7 +116,7 @@ export const portfolioData = {
                     title: "Head of Public Relations",
                     duration: "May 2023 - Apr 2024 · 1 yr",
                     location: "Prayagraj, Uttar Pradesh, India",
-                    description: "Managed public relations and media outreach for the annual cultural festival.",
+                    description: "Led public relations and outreach for the annual cultural festival, coordinating communication, partnerships, and external engagement efforts. Helped improve event visibility and represented the festival across stakeholders, strengthening my leadership, communication, and execution skills.",
                     skills: ["Public Relations", "Leadership", "Event Management"]
                 }
             ]

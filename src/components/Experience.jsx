@@ -2,8 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolio';
-import Tilt from 'react-parallax-tilt';
 import { FaBriefcase } from 'react-icons/fa';
+import rdsLogo from '../assets/RDS Logo final_V04.png';
 
 const Experience = () => {
     const { experience } = portfolioData;
@@ -26,7 +26,13 @@ const Experience = () => {
 
                 {/* Timeline Container */}
                 <div className="relative border-l-2 border-white/10 ml-4 md:ml-10 space-y-12">
-                    {experience.map((exp, index) => (
+                    {experience.map((exp, index) => {
+                        const logoSrc = exp.organization === 'Real Dimension Studio' ? rdsLogo : exp.logo;
+                        const websiteLabel = exp.website
+                            ? exp.website.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/$/, '')
+                            : null;
+
+                        return (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, x: -20 }}
@@ -38,100 +44,88 @@ const Experience = () => {
                             {/* Dot */}
                             <span className="absolute -left-[9px] top-6 bg-dark border-2 border-skyBlue w-4 h-4 rounded-full" />
 
-                            <Tilt
-                                glareEnable={true}
-                                glareMaxOpacity={0.4}
-                                glareColor="#ffffff"
-                                glarePosition="all"
-                                glareBorderRadius="12px"
-                                perspective={1000}
-                                scale={1.02}
-                                transitionSpeed={1000}
-                            >
-                                <div className="glass-card p-6 md:p-8 rounded-xl border-l-4 border-l-skyBlue hover:bg-white/5 transition-all">
-                                    {/* Organization Header */}
-                                    <div className="flex items-center gap-4 mb-6 border-b border-white/10 pb-4">
-                                        <div className="w-16 h-16 rounded-lg overflow-hidden bg-white/5 p-1">
-                                            <img
-                                                src={exp.logo}
-                                                alt={exp.organization || exp.institution}
-                                                className="w-full h-full object-contain rounded-md"
-                                            />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-xl md:text-2xl font-bold text-white">
-                                                {exp.organization || exp.institution}
-                                            </h3>
-                                            {exp.website && (
-                                                <a
-                                                    href={exp.website}
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                    className="mt-1 inline-block text-sm text-skyBlue hover:text-white transition-colors"
-                                                >
-                                                    realdimensionstudio.com
-                                                </a>
-                                            )}
-                                            {exp.location && (
-                                                <p className="text-sm text-gray-400 mt-1 flex items-center gap-1">
-                                                    {/* You could add a location icon here if desired */}
-                                                    {exp.location}
-                                                </p>
-                                            )}
-                                        </div>
+                            <div className="glass-card rounded-xl border-l-4 border-l-skyBlue p-6 transition-colors hover:bg-white/5 md:p-8">
+                                {/* Organization Header */}
+                                <div className="mb-6 flex items-center gap-4 border-b border-white/10 pb-4">
+                                    <div className="w-16 h-16 rounded-lg overflow-hidden bg-white/5 p-1">
+                                        <img
+                                            src={logoSrc}
+                                            alt={exp.organization || exp.institution}
+                                            className="w-full h-full object-contain rounded-md"
+                                        />
                                     </div>
-
-                                    {/* Roles Timeline within the card */}
-                                    <div className="space-y-8 relative">
-                                        {/* Inner line for multiple roles */}
-                                        {exp.roles.length > 1 && (
-                                            <div className="absolute left-[7px] top-2 bottom-2 w-[2px] bg-white/10" />
+                                    <div>
+                                        <h3 className="text-xl md:text-2xl font-bold text-white">
+                                            {exp.organization || exp.institution}
+                                        </h3>
+                                        {exp.website && (
+                                            <a
+                                                href={exp.website}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="mt-1 inline-block text-sm text-skyBlue hover:text-white transition-colors"
+                                            >
+                                                {websiteLabel}
+                                            </a>
                                         )}
-
-                                        {exp.roles.map((role, rIndex) => (
-                                            <div key={rIndex} className="relative pl-6">
-                                                {/* Sub-dot for role */}
-                                                {exp.roles.length > 1 && (
-                                                    <span className="absolute left-[0px] top-2 w-[16px] h-[16px] bg-dark rounded-full border border-gray-600 flex items-center justify-center">
-                                                        <span className="w-1.5 h-1.5 bg-skyBlue rounded-full" />
-                                                    </span>
-                                                )}
-
-                                                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-                                                    <h4 className="text-lg font-bold text-skyBlue">{role.title}</h4>
-                                                    <span className="text-xs font-mono text-gray-400 bg-black/30 px-2 py-1 rounded border border-white/5 mt-1 md:mt-0 w-fit">
-                                                        {role.duration}
-                                                    </span>
-                                                </div>
-
-                                                {role.employment_type && (
-                                                    <p className="text-xs text-gray-500 mb-2">{role.employment_type}</p>
-                                                )}
-
-                                                <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                                                    {role.description}
-                                                </p>
-
-                                                {/* Skills Tags */}
-                                                {role.skills && (
-                                                    <div className="flex flex-wrap gap-2">
-                                                        {role.skills.map((skill, sIndex) => (
-                                                            <span
-                                                                key={sIndex}
-                                                                className="text-xs text-gray-400 bg-white/5 px-2 py-1 rounded hover:bg-white/10 transition-colors"
-                                                            >
-                                                                {skill}
-                                                            </span>
-                                                        ))}
-                                                    </div>
-                                                )}
-                                            </div>
-                                        ))}
+                                        {exp.location && (
+                                            <p className="text-sm text-gray-400 mt-1 flex items-center gap-1">
+                                                {exp.location}
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
-                            </Tilt>
+
+                                {/* Roles Timeline within the card */}
+                                <div className="relative space-y-8">
+                                    {/* Inner line for multiple roles */}
+                                    {exp.roles.length > 1 && (
+                                        <div className="absolute left-[7px] top-2 bottom-2 w-[2px] bg-white/10" />
+                                    )}
+
+                                    {exp.roles.map((role, rIndex) => (
+                                        <div key={rIndex} className="relative pl-6">
+                                            {/* Sub-dot for role */}
+                                            {exp.roles.length > 1 && (
+                                                <span className="absolute left-[0px] top-2 w-[16px] h-[16px] bg-dark rounded-full border border-gray-600 flex items-center justify-center">
+                                                    <span className="w-1.5 h-1.5 bg-skyBlue rounded-full" />
+                                                </span>
+                                            )}
+
+                                            <div className="mb-2 flex flex-col md:flex-row md:justify-between md:items-start">
+                                                <h4 className="text-lg font-bold text-skyBlue">{role.title}</h4>
+                                                <span className="mt-1 w-fit rounded border border-white/5 bg-black/30 px-2 py-1 text-xs font-mono text-gray-400 md:mt-0">
+                                                    {role.duration}
+                                                </span>
+                                            </div>
+
+                                            {role.employment_type && (
+                                                <p className="mb-2 text-xs text-gray-500">{role.employment_type}</p>
+                                            )}
+
+                                            <p className="mb-4 text-sm leading-relaxed text-gray-300">
+                                                {role.description}
+                                            </p>
+
+                                            {/* Skills Tags */}
+                                            {role.skills && (
+                                                <div className="flex flex-wrap gap-2">
+                                                    {role.skills.map((skill, sIndex) => (
+                                                        <span
+                                                            key={sIndex}
+                                                            className="rounded bg-white/5 px-2 py-1 text-xs text-gray-400 transition-colors hover:bg-white/10"
+                                                        >
+                                                            {skill}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </motion.div>
-                    ))}
+                    )})}
                 </div>
             </div>
         </section>
