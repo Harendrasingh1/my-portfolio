@@ -62,6 +62,16 @@ const Experience = () => {
                                             <h3 className="text-xl md:text-2xl font-bold text-white">
                                                 {exp.organization || exp.institution}
                                             </h3>
+                                            {exp.website && (
+                                                <a
+                                                    href={exp.website}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="mt-1 inline-block text-sm text-skyBlue hover:text-white transition-colors"
+                                                >
+                                                    realdimensionstudio.com
+                                                </a>
+                                            )}
                                             {exp.location && (
                                                 <p className="text-sm text-gray-400 mt-1 flex items-center gap-1">
                                                     {/* You could add a location icon here if desired */}

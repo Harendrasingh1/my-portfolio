@@ -62,6 +62,20 @@ export const portfolioData = {
     ],
     experience: [
         {
+            organization: "Real Dimension Studio",
+            logo: "/assets/RDS Logo final_V04.png",
+            website: "https://realdimensionstudio.com",
+            roles: [
+                {
+                    title: "Full Stack Developer",
+                    employment_type: "Full Time",
+                    duration: "May 2025 - Sep 2025",
+                    description: "Built and maintained the Real Dimension Studio website as a frontend-heavy project with full-stack ownership. Developed the public-facing React experience, designed reusable UI sections, and also implemented the Node.js backend layer to manage website content and business data. Created an internal dashboard for updating data shown on the website, enabling structured content management and end-to-end admin workflows.",
+                    skills: ["React", "JavaScript", "Tailwind CSS", "Framer Motion", "Node.js", "Dashboard Development", "CRUD", "Full Stack Development"]
+                }
+            ]
+        },
+        {
             organization: "Urban Company",
             logo: "/assets/urbancompany_logo.jpg",
             roles: [
