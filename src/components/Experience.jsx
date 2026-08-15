@@ -103,9 +103,21 @@ const Experience = () => {
                                                 <p className="mb-2 text-xs text-gray-500">{role.employment_type}</p>
                                             )}
 
-                                            <p className="mb-4 text-sm leading-relaxed text-gray-300">
-                                                {role.description}
-                                            </p>
+                                            {role.location && (
+                                                <p className="mb-3 text-sm text-gray-400">{role.location}</p>
+                                            )}
+
+                                            {Array.isArray(role.description) ? (
+                                                <ul className="mb-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-gray-300">
+                                                    {role.description.map((item, descriptionIndex) => (
+                                                        <li key={descriptionIndex}>{item}</li>
+                                                    ))}
+                                                </ul>
+                                            ) : (
+                                                <p className="mb-4 text-sm leading-relaxed text-gray-300">
+                                                    {role.description}
+                                                </p>
+                                            )}
 
                                             {/* Skills Tags */}
                                             {role.skills && (

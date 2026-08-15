@@ -47,7 +47,11 @@ const Footer = () => {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500">Email</p>
-                                    <a href={`mailto:${contactInfo.email}`} className="font-medium hover:text-white transition-colors">{contactInfo.email}</a>
+                                    <div className="flex flex-col gap-1">
+                                        {(contactInfo.emails || [contactInfo.email]).map((email) => (
+                                            <a key={email} href={`mailto:${email}`} className="font-medium hover:text-white transition-colors">{email}</a>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
 
